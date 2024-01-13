@@ -1,4 +1,5 @@
 package ru.netology.customRadio;
+
 public class Radio {
     private int numberCurrentStation;
     private int volume;
@@ -17,20 +18,18 @@ public class Radio {
         numberCurrentStation = newNumberCurrentStation;
     }
 
-    public void nextStation(){
-        if (numberCurrentStation == 9){
+    public void nextStation() {
+        if (numberCurrentStation == 9) {
             numberCurrentStation = 0;
-        }
-        else{
+        } else {
             numberCurrentStation = numberCurrentStation + 1;
         }
     }
 
-    public void prevStation(){
-        if (numberCurrentStation == 0){
+    public void prevStation() {
+        if (numberCurrentStation == 0) {
             numberCurrentStation = 9;
-        }
-        else{
+        } else {
             numberCurrentStation = numberCurrentStation - 1;
         }
     }
@@ -39,13 +38,13 @@ public class Radio {
         return volume;
     }
 
-    public void increaseVolume(){
+    public void increaseVolume() {
         if (volume < 100) {
             volume = volume + 1;
         }
     }
 
-    public void downVolume(){
+    public void downVolume() {
         if (volume > 0) {
             volume = volume - 1;
         }
